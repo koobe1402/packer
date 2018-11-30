@@ -6,3 +6,6 @@
   * Private subnet CIDR used are: 10.0.10.0/24, 10.0.11.0/24, 10.0.12.0/24
 * In the public subnet we place a NAT gateway and the LoadBalancer
 * The private subnets are used in the autoscale group which places instances in them
+* Each subnet is associated with it's own routing table. Besides the default local network rule a new rule it's added to the routing table, as follows:
+  * For public subnet a rule to the Internet Gateway (IGW)
+  * For private subnets a rule to the NAT Gateway (NATGW)
