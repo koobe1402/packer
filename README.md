@@ -49,7 +49,7 @@ Each AWS resource is living in it's own directory, inside roots, and has to be d
 Quick way to create this from the repository as is:
 
 ```bash
-$AWS_DEFAULT_PROFILE=project aws-profile  terraform init
+$AWS_DEFAULT_PROFILE=project aws-profile terraform init
 $AWS_DEFAULT_PROFILE=project aws-profile terraform get
 $AWS_DEFAULT_PROFILE=project aws-profile terraform apply
 ```
