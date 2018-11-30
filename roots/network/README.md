@@ -17,7 +17,7 @@ The configuration includes the following:
 * The private subnets are used in the autoscale group which places instances in them
 * Each subnet is associated with it's own routing table. Besides the default local network rule a new rule it's added to the routing table, as follows:
   * For public subnet a rule to the Internet Gateway (IGW)
-  * For private subnets a rule to the NAT Gateway (NATGW)
+  * For private subnets a rule to the NAT Gateway (NATGW) (This rules are created in nat resource since the nat resource must exist prior to rule creation)
 
 ### Routing
 
