@@ -5,7 +5,7 @@ The configuration with public/private subnets is recommend for running a public-
 The instances in the public subnet can send outbound traffic directly to the Internet, whereas the instances in the private subnet can't. Instead, the instances in the private subnet can access the Internet by using a network address translation (NAT) gateway that resides in the public subnet. The database servers can connect to the Internet for software updates using the NAT gateway, but the Internet cannot establish connections to the database servers.
 
 ## Configuration
-### Configuration
+
 The configuration includes the following:
 
 * Virtual Private Cloud (VPC) with a /16 ip address range and an internet gateway
@@ -18,3 +18,20 @@ The configuration includes the following:
 * Each subnet is associated with it's own routing table. Besides the default local network rule a new rule it's added to the routing table, as follows:
   * For public subnet a rule to the Internet Gateway (IGW)
   * For private subnets a rule to the NAT Gateway (NATGW)
+
+### Routing
+
+* Rules for Public Subnets
+
+| Destination   | Target         |
+| ------------- | -------------- |
+| 10.0.0.0/16   | local          |
+| 0.0.0.0/0     | igw-id         |
+
+
+* Rules for Private Subnets
+
+| Destination   | Target         |
+| ------------- | -------------- |
+| 10.0.0.0/16   | local          |
+| 0.0.0.0/0     | nat-gateway-id |
