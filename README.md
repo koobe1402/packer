@@ -27,7 +27,7 @@ $AWS_DEFAULT_PROFILE=project aws-profile command [args]
 
 This repository contains the Terraform modules and code for creating a fully working AWS Environment consisting of:
 * [State Management](roots/terraform-state/README.md)
-* [Networking](roots/networking/README.md)
+* [Networking](roots/network/README.md)
 * [Bastion Host](#bastion)
 * [NAT GW](#natgw)
 * [RDS](#rds)
