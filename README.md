@@ -29,7 +29,7 @@ This repository contains the Terraform modules and code for creating a fully wor
 * [State Management](roots/terraform-state/README.md)
 * [Networking](roots/network/README.md)
 * [Bastion Host](roots/bastion/README.md)
-* [NAT GW](#natgw)
+* [NAT GW](roots/nat/README.md)
 * [RDS](#rds)
 * [Elastic Beanstalk](#eb)
 
