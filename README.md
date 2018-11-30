@@ -28,7 +28,7 @@ $AWS_DEFAULT_PROFILE=project aws-profile command [args]
 This repository contains the Terraform modules and code for creating a fully working AWS Environment consisting of:
 * [State Management](roots/terraform-state/README.md)
 * [Networking](roots/network/README.md)
-* [Bastion Host](#bastion)
+* [Bastion Host](roots/bastion/README.md)
 * [NAT GW](#natgw)
 * [RDS](#rds)
 * [Elastic Beanstalk](#eb)
@@ -53,7 +53,3 @@ terraform init
 terraform get
 terraform apply
 ```
-
-## SSH access to the instances
-
-You should not put your instances directly on the internet. You should not allow SSH access to the instances directly but use a bastion server for that. You don't want to make any manual changes in the production environment. you also want to limit manual changes in other environments.
